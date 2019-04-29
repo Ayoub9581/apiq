@@ -1,0 +1,14 @@
+
+{% block title %} Comment List{% endblock title %}
+
+{% block content %}
+
+<ul>
+  {% for snippet in comment_list %}
+    <li>
+      <a href="{% url 'commentaire:detail' snippet.id %}">{{ snippet.email }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% endblock content %}
