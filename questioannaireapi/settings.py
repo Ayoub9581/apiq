@@ -25,7 +25,7 @@ SECRET_KEY = '&i_lfdsb+beg2al=t*-mdp^ng0-qx*tr34)q-ay^f62e#2wd)$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'commentaire',
+    'myapp',
 ]
 
 MIDDLEWARE = [
@@ -80,13 +81,13 @@ WSGI_APPLICATION = 'questioannaireapi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'questioannaireapi',
-        'USER':'postgres',
-        'PASSWORD':'postgres',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'questionnaire',
+        'USER':'root',
+        'PASSWORD':'ay9§gdax',
         'HOST':'localhost',
-        'PORT':'5432',
-    }
+        'PORT':'3306',
+    },
 }
 
 
